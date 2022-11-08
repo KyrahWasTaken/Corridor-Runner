@@ -10,46 +10,67 @@ using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
-    public ToggleGroup toggleGroup;
-    public Transform difficulty;
-    public Transform gameOverScreen;
+    [Header("Between Screen Transition")]
+    public AnimationCurve pageSwitchAnimation;
+    public float transitionTime;
 
     public RectTransform All;
-    public AnimationCurve pageSwitchAnimation;
 
-    public Vector3 mainPosition;
-    public Vector3 settingsPosition;
-    public Vector3 GameOverPosition;
+    [Header("Main Page")]
+    public RectTransform mainPage;
+    public Button mainPlayBtn; //Uncomment if specific logic is needed
+    public Button mainSettingsBtn;
 
-    public float transitionTime;
+
+    [Header("Settings")]
+    public RectTransform settingsPage;
+    public ToggleGroup settingsTG;
+    public Toggle settingsDifficulty1;
+    public Toggle settingsDifficulty2;
+    public Toggle settingsDifficulty3;
+    public Button settingsSaveButton;
+    public Button settingsCancelButton;
+
+
+    [Header("Game Over")]
+    public RectTransform gameOverPage;
+    public TextMeshProUGUI gameOverScore;
+    public TextMeshProUGUI gameOverMaxScore;
+    public TextMeshProUGUI gameOverAttempt;
+    public Button gameOverMenuButton;
+    public Button gameOverRetryButton;
+
     private void Start()
     {
-        if(PlayerPrefs.GetInt("JustDied",0)==1)
+        if(PlayerPrefs.GetInt("JustDied",0)==1) //IF PLAYER HAS JUST DIE SHOW THEM GAME OVER SCREEN AND LOAD ITS VALUES; 
         {
-            All.anchoredPosition = -GameOverPosition;
-            gameOverScreen.Find("Score").Find("Value").GetComponent<TextMeshProUGUI>().text = PlayerPrefs.GetInt("Score").ToString();
-            gameOverScreen.Find("MaxScore").Find("Value").GetComponent<TextMeshProUGUI>().text = PlayerPrefs.GetInt("MaxScore").ToString();
-            gameOverScreen.Find("Attempt").Find("Value").GetComponent<TextMeshProUGUI>().text = PlayerPrefs.GetInt("TotalAttempts").ToString();
+            All.anchoredPosition = -gameOverPage.anchoredPosition;
+            gameOverScore.   text = PlayerPrefs.GetInt("Score").ToString();
+            gameOverMaxScore.text = PlayerPrefs.GetInt("MaxScore").ToString();
+            gameOverAttempt. text = PlayerPrefs.GetInt("TotalAttempts").ToString();
+            PlayerPrefs.SetInt("JustDied", 0);
         }
-        PlayerPrefs.SetInt("JustDied", 0);
-        difficulty.Find(PlayerPrefs.GetInt("diff").ToString()).GetComponent<Toggle>().isOn = true;
-    }
-    public void SaveSettings()
-    {
-        if (PlayerPrefs.HasKey("diff"))
-        PlayerPrefs.SetInt("diff", int.Parse(toggleGroup.GetFirstActiveToggle().name));
-    }
-    public void Settings()
-    {
-        StartCoroutine(MenuTransition(settingsPosition));
-    }
-    public void MainPage()
-    {
-        StartCoroutine(MenuTransition(mainPosition));
-    }
-    public void Play()
-    {
-        SceneManager.LoadScene("MainGame");
+        
+        switch (PlayerPrefs.GetInt("diff")) //Make settings in UI look according to real settings
+        {
+            case 1: settingsDifficulty1.isOn = true; break;
+            case 2: settingsDifficulty2.isOn = true; break;
+            case 3: settingsDifficulty3.isOn = true; break;
+        }
+
+        mainPlayBtn.onClick.AddListener(() =>{ SceneManager.LoadScene("MainGame") ;});
+        mainSettingsBtn.onClick.AddListener(() =>{ StartCoroutine(MenuTransition(settingsPage.anchoredPosition)); });
+
+        settingsSaveButton.onClick.AddListener(() => 
+        { 
+            PlayerPrefs.SetInt("diff", int.Parse(settingsTG.GetFirstActiveToggle().name)); 
+            StartCoroutine(MenuTransition(mainPage.anchoredPosition));
+        });
+        settingsCancelButton.onClick.AddListener(() =>{StartCoroutine(MenuTransition(mainPage.anchoredPosition));});
+
+        gameOverMenuButton.onClick.AddListener(() =>{StartCoroutine(MenuTransition(mainPage.anchoredPosition));});
+        gameOverRetryButton.onClick.AddListener(() =>{ SceneManager.LoadScene("MainGame"); });
+
     }
     IEnumerator MenuTransition(Vector3 to)
     {

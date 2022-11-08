@@ -382,7 +382,6 @@
 "Assets/Scripts/LevelPart.cs"
 "Assets/Scripts/MainMenu.cs"
 "Assets/Scripts/Player.cs"
-"Assets/Scripts/Save.cs"
 -langversion:9.0
 
 /deterministic

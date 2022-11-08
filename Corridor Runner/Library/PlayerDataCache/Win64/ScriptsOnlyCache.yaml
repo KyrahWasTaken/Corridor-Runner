@@ -87,28 +87,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Navigation
     - UnityEngine.UI.SpriteState
     - UnityEngine.UI.Toggle/ToggleEvent
-  methodsToPreserve:
-  - assembly: Assembly-CSharp
-    fullTypeName: MainMenu
-    methodName: Play
-  - assembly: Assembly-CSharp
-    fullTypeName: MainMenu
-    methodName: Play
-  - assembly: Assembly-CSharp
-    fullTypeName: MainMenu
-    methodName: MainPage
-  - assembly: Assembly-CSharp
-    fullTypeName: MainMenu
-    methodName: MainPage
-  - assembly: Assembly-CSharp
-    fullTypeName: MainMenu
-    methodName: SaveSettings
-  - assembly: Assembly-CSharp
-    fullTypeName: MainMenu
-    methodName: Settings
-  - assembly: Assembly-CSharp
-    fullTypeName: MainMenu
-    methodName: MainPage
+  methodsToPreserve: []
   sceneClasses:
     Assets/Scenes/MainGame.unity:
     - Class: 1
@@ -136,23 +115,23 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 2836}
+      Script: {instanceID: 2600}
     - Class: 114
-      Script: {instanceID: 3096}
+      Script: {instanceID: 2856}
     - Class: 114
-      Script: {instanceID: 5984}
+      Script: {instanceID: 3116}
     - Class: 114
-      Script: {instanceID: 6724}
+      Script: {instanceID: 3898}
     - Class: 114
-      Script: {instanceID: 6926}
+      Script: {instanceID: 6008}
     - Class: 114
-      Script: {instanceID: 7342}
+      Script: {instanceID: 6748}
     - Class: 114
-      Script: {instanceID: 25566}
+      Script: {instanceID: 6950}
     - Class: 114
-      Script: {instanceID: 25730}
+      Script: {instanceID: 7366}
     - Class: 114
-      Script: {instanceID: 32226}
+      Script: {instanceID: 8514}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -168,6 +147,8 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    - Class: 687078895
       Script: {instanceID: 0}
     Assets/Scenes/MainMenu.unity:
     - Class: 1
@@ -195,33 +176,33 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1604}
+      Script: {instanceID: 1622}
     - Class: 114
-      Script: {instanceID: 2328}
+      Script: {instanceID: 2346}
     - Class: 114
-      Script: {instanceID: 2836}
+      Script: {instanceID: 2856}
     - Class: 114
-      Script: {instanceID: 3096}
+      Script: {instanceID: 3116}
     - Class: 114
-      Script: {instanceID: 3432}
+      Script: {instanceID: 3452}
     - Class: 114
-      Script: {instanceID: 3456}
+      Script: {instanceID: 3476}
     - Class: 114
-      Script: {instanceID: 4736}
+      Script: {instanceID: 4760}
     - Class: 114
-      Script: {instanceID: 5070}
+      Script: {instanceID: 5094}
     - Class: 114
-      Script: {instanceID: 5810}
+      Script: {instanceID: 5834}
     - Class: 114
-      Script: {instanceID: 5984}
+      Script: {instanceID: 6008}
     - Class: 114
-      Script: {instanceID: 6724}
+      Script: {instanceID: 6748}
     - Class: 114
-      Script: {instanceID: 6926}
+      Script: {instanceID: 6950}
     - Class: 114
-      Script: {instanceID: 7342}
+      Script: {instanceID: 7366}
     - Class: 114
-      Script: {instanceID: 41626}
+      Script: {instanceID: 9010}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -239,6 +220,8 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    - Class: 687078895
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -355,6 +338,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.IK.Runtime.dll
     namespaceName: UnityEngine.U2D.IK
     className: IKManager2D
+  - hash:
+      serializedVersion: 2
+      Hash: b71a2fe255bc6effe6cd6c41ae206b0d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Player
   - hash:
       serializedVersion: 2
       Hash: 06fa49a6e484b4c3e67d41ed9b03d996
@@ -547,6 +536,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
     className: PlayerQuitHandler
+  - hash:
+      serializedVersion: 2
+      Hash: afc5b93a7b192de2dcb3832fe35a5c7e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LevelPart
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1053,6 +1048,12 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
+      Hash: dca17830c0c6be7ac9dbb876f050d880
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LevelBuilder
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
@@ -1087,6 +1088,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.Animation.Runtime.dll
     namespaceName: UnityEngine.U2D.Animation
     className: SpriteLibraryAsset
+  - hash:
+      serializedVersion: 2
+      Hash: eae728bacb3c323440813e81aa99ddc1
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MainMenu
   - hash:
       serializedVersion: 2
       Hash: 63bdc2cf3273aa9bf650350f19d2af61
@@ -1165,30 +1172,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: dca17830c0c6be7ac9dbb876f050d880
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: LevelBuilder
-  - hash:
-      serializedVersion: 2
-      Hash: afc5b93a7b192de2dcb3832fe35a5c7e
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: LevelPart
-  - hash:
-      serializedVersion: 2
-      Hash: b71a2fe255bc6effe6cd6c41ae206b0d
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Player
-  - hash:
-      serializedVersion: 2
-      Hash: 96ab9b869d4ab0ddf0a2847519a0b216
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: MainMenu
   platform: 19
   scenePathNames:
   - Assets/Scenes/MainMenu.unity

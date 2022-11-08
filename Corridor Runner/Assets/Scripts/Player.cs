@@ -19,6 +19,8 @@ public class Player : MonoBehaviour
         difficulty = PlayerPrefs.GetInt("diff");
         StartCoroutine(IncreaseSpeed());
         StartCoroutine(IncreaseScore());
+        uiScore.transform.parent.parent.Find("Speed").Find("Value").GetComponent<TextMeshProUGUI>().text = ((int)speed).ToString();
+        uiScore.transform.parent.parent.Find("Diff").Find("Value").GetComponent<TextMeshProUGUI>().text = difficulty.ToString();
     }
 
     private IEnumerator IncreaseScore()
@@ -36,6 +38,8 @@ public class Player : MonoBehaviour
         while(true)
         {
             yield return new WaitForSeconds(time2SpeedIncrease);
+            uiScore.transform.parent.parent.Find("Speed").Find("Value").GetComponent<TextMeshProUGUI>().text = ((int)speed).ToString();
+            uiScore.transform.parent.parent.Find("Diff").Find("Value").GetComponent<TextMeshProUGUI>().text = difficulty.ToString();
             speed += speedIncrease * difficulty;
         }
     }

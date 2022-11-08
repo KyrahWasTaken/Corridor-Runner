@@ -15,15 +15,15 @@ SpriteAtlas:
       compressionQuality: 50
       maxTextureSize: 2048
       textureCompression: 0
-      filterMode: 1
-      generateMipMaps: 0
+      filterMode: 0
+      generateMipMaps: 1
       readable: 0
       crunchedCompression: 0
       sRGB: 1
     platformSettings: []
     packingSettings:
       serializedVersion: 2
-      padding: 4
+      padding: 8
       blockOffset: 1
       allowAlphaSplitting: 0
       enableRotation: 1
@@ -31,13 +31,40 @@ SpriteAtlas:
       enableAlphaDilation: 0
     secondaryTextureSettings: {}
     variantMultiplier: 1
-    packables: []
+    packables:
+    - {fileID: 2800000, guid: 6cd12b26fa7f70d48a53b7d09b8e57f3, type: 3}
+    - {fileID: 2800000, guid: 5e5efff1ef4e61c4185740aac708c74e, type: 3}
+    - {fileID: 2800000, guid: 2986671b72688284296868b2924b5a33, type: 3}
+    - {fileID: 2800000, guid: 93cc6e9d70a63344eb3093aac7ab9331, type: 3}
+    - {fileID: 2800000, guid: 3ee8902c29ab9d64ca61b6a7396c73e3, type: 3}
+    - {fileID: 2800000, guid: cf422b4716e24904db629b94f9eaa95a, type: 3}
+    - {fileID: 2800000, guid: 57c126bce4aff52469c2b06def761f72, type: 3}
+    - {fileID: 2800000, guid: 30a18fef2e98d8047be13efece8c32c8, type: 3}
+    - {fileID: 2800000, guid: c0fd3f3ca6c40ec42a3b3f756453843d, type: 3}
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
-  m_PackedSprites: []
-  m_PackedSpriteNamesToIndex: []
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 5e5efff1ef4e61c4185740aac708c74e, type: 3}
+  - {fileID: 21300000, guid: 6cd12b26fa7f70d48a53b7d09b8e57f3, type: 3}
+  - {fileID: 21300000, guid: cf422b4716e24904db629b94f9eaa95a, type: 3}
+  - {fileID: 21300000, guid: 2986671b72688284296868b2924b5a33, type: 3}
+  - {fileID: 21300000, guid: 3ee8902c29ab9d64ca61b6a7396c73e3, type: 3}
+  - {fileID: 21300000, guid: c0fd3f3ca6c40ec42a3b3f756453843d, type: 3}
+  - {fileID: 21300000, guid: 57c126bce4aff52469c2b06def761f72, type: 3}
+  - {fileID: 21300000, guid: 93cc6e9d70a63344eb3093aac7ab9331, type: 3}
+  - {fileID: 21300000, guid: 30a18fef2e98d8047be13efece8c32c8, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Dira_Pesher
+  - Castle
+  - stalactit_Ey_Dima_i_love_you
+  - Dragon_Golg
+  - Sastavka
+  - UndGrnd2
+  - UndGrnd0_fon
+  - FaerBall
+  - UndGrnd1
   m_RenderDataMap: {}
   m_Tag: Atlas
   m_IsVariant: 0
